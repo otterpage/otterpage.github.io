@@ -1,10 +1,16 @@
 # Otterpage
 
-An educational adventure game for kids 6 and up (prototype for family testing).
+They think they're just playing. You'll know they're learning.
+
+An adventure game for kids 7–10 where they explore a magical world and learn math, reading, science, geography and history along the way (prototype for family testing).
 
 Play: https://otterpage.github.io/
 
-On iPhone or iPad: open the link in Safari, tap Share, then «Add to Home Screen». After the first time, it opens and saves without internet.
+On iPhone or iPad: open the link in Safari, tap Share, then «Add to Home Screen».
+
+On Android: open the link in Chrome, tap the menu ⋮, then «Install app» (or «Add to Home screen»).
+
+After the first time, it opens and saves without internet.
 
 ## Copyright
 
