@@ -2,7 +2,7 @@
 
 They think they're just playing. You'll know they're learning.
 
-An adventure game for kids 7–10 where they explore a magical world and learn math, reading, science, geography and history along the way (prototype for family testing).
+An adventure game for kids 6 and up where they explore a magical world and learn math, reading, science, geography and history along the way (prototype for family testing).
 
 Play: https://otterpage.github.io/
 
