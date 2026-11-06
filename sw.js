@@ -2,7 +2,7 @@
 // The game and its icons are kept on the device: it opens without internet. When there is internet, a new version is
 // fetched in the background and used the next time the game is opened. The saved game is never touched here
 // (it lives in the device's storage, not in this cache). The voices are kept the first time they are played.
-const VERSION = '0.187.8';
+const VERSION = '0.187.9';
 const CACHE = `otterpage-${VERSION}`;
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
@@ -27,6 +27,12 @@ self.addEventListener('fetch', (e) => {
   if (url.pathname.includes('/voice/')) {
     e.respondWith((async () => {
       const c = await caches.open('otterpage-voices');
+      // 6-nov-2026: the small index (.json) is asked for fresh first, so new recordings arrive; it names the audio file,
+      // and a new recording has a new file name (the old one is not used any more)
+      if (url.pathname.endsWith('.json')) {
+        try { const res = await fetch(req, { cache: 'no-store' }); if (res.ok) { c.put(req, res.clone()); return res; } } catch { /* offline */ }
+        return (await c.match(req)) || new Response('{}', { status: 503 });
+      }
       const hit = await c.match(req);
       if (hit) return hit;
       const res = await fetch(req);
