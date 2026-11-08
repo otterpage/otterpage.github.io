@@ -2,7 +2,7 @@
 // The game and its icons are kept on the device: it opens without internet. With internet, the newest version opens
 // straight away; without it, the saved copy. The saved game is never touched here
 // (it lives in the device's storage, not in this cache). The voices are kept the first time they are played.
-const VERSION = '0.187.35';
+const VERSION = '0.187.36';
 const CACHE = `otterpage-${VERSION}`;
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
 
